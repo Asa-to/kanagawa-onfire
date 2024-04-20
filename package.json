@@ -9,12 +9,18 @@
   },
   "private": true,
   "dependencies": {
+    "@hono/zod-validator": "^0.2.1",
     "hono": "^4.1.4",
-    "honox": "^0.1.9"
+    "honox": "^0.1.9",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240208.0",
     "@hono/vite-cloudflare-pages": "^0.2.4",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "typescript": "5.1.6",
     "vite": "^5.0.12"
   }
 }

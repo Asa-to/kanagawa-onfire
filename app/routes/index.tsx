@@ -1,18 +1,22 @@
-import { css } from 'hono/css'
-import { createRoute } from 'honox/factory'
-import Counter from '../islands/counter'
-
-const className = css`
-  font-family: sans-serif;
-`
+import { createRoute } from "honox/factory";
 
 export default createRoute((c) => {
-  const name = c.req.query('name') ?? 'Hono'
   return c.render(
-    <div class={className}>
-      <h1>Hello, {name}!</h1>
-      <Counter />
+    <div>
+      <header>
+        <h1>神奈川オンファイア</h1>
+      </header>
+      <main>
+        <p>サービスを利用するためにはログインしてください</p>
+        <form method="post" action="api/signin">
+          <label name="name">名前</label>
+          <input name="name" />
+          <label name="icon">アイコン</label>
+          <input name="icon" type="file" accept="image/*" />
+          <button type="submit">ログイン</button>
+        </form>
+      </main>
     </div>,
-    { title: name }
-  )
-})
+    { title: "トップページ" }
+  );
+});
