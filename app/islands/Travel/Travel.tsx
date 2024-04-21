@@ -6,7 +6,10 @@ const Travel = () => {
     <>
       {stub_travel.map((data) => {
         return (
-          <div class="flex flex-col gap-2 shadow-lg border border-black p-2 rounded-lg">
+          <a
+            class="flex flex-col gap-2 shadow-lg border border-black p-2 rounded-lg"
+            href={`/travel/${data.id}`}
+          >
             <img src={data.images[0]} alt={`${data.title}のベストショット`} />
             <h2 class="text-xl">{data.title}</h2>
             <p class="m-0">
@@ -26,7 +29,7 @@ const Travel = () => {
                 );
               })}
             </div>
-          </div>
+          </a>
         );
       })}
     </>

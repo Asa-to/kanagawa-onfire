@@ -1,6 +1,6 @@
 import { createRoute } from "honox/factory";
-import { Prefectures, prefectureKanjiMap } from "../../const/prefectures";
-import Travel from "../../islands/Travel/Travel";
+import { Prefectures, prefectureKanjiMap } from "../../../const/prefectures";
+import Travel from "../../../islands/Travel/Travel";
 
 export default createRoute((c) =>
   c.render(
