@@ -9,7 +9,14 @@ export const stub_travel = [
     teamId: "123456",
     members: ["asato", "ash"],
     prefectures: ["akita", "hokkaido"],
-    images: ["https://img.activityjapan.com/wi/ginzanonsen-tour_thumb.jpg"],
+    images: [
+      "https://img.activityjapan.com/wi/ginzanonsen-tour_thumb.jpg",
+      "https://img.activityjapan.com/wi/ginzanonsen-tour_thumb.jpg",
+      "https://img.activityjapan.com/wi/ginzanonsen-tour_thumb.jpg",
+      "https://img.activityjapan.com/wi/ginzanonsen-tour_thumb.jpg",
+      "https://img.activityjapan.com/wi/ginzanonsen-tour_thumb.jpg",
+      "https://img.activityjapan.com/wi/ginzanonsen-tour_thumb.jpg",
+    ],
   },
 ];
 

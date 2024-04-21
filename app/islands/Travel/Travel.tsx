@@ -12,12 +12,12 @@ const Travel = () => {
           >
             <img src={data.images[0]} alt={`${data.title}のベストショット`} />
             <h2 class="text-xl">{data.title}</h2>
-            <p class="m-0">
+            <p>
               {dayjs(data.begin).format("YYYY/MM/DD")} ~{" "}
               {dayjs(data.end).format("YYYY/MM/DD")}
             </p>
             <div class="flex flex-row gap-2 items-center">
-              <p class="w-fit m-0">参加メンバー：</p>
+              <p class="w-fit">メンバー：</p>
               {data.members.map((memberId) => {
                 const member = stub_member.find(
                   (member) => member.id === memberId
