@@ -12,13 +12,13 @@ export default jsxRenderer(({ children, title }) => {
         <Script src="/app/client.ts" async />
         <Style />
         {import.meta.env.PROD ? (
-          <link rel="stylesheet" href="/static/assets/styles/tailwind.css" />
+          <link rel="stylesheet" href="/static/assets/tailwind.css" />
         ) : (
           <link href="/app/styles/tailwind.css" rel="stylesheet" />
         )}
         <link href="https://unpkg.com/mvp.css" rel="stylesheet" />
         {import.meta.env.PROD ? (
-          <link rel="stylesheet" href="/static/assets/styles/reset.css" />
+          <link rel="stylesheet" href="/static/assets/reset.css" />
         ) : (
           <link href="/app/styles/reset.css" rel="stylesheet" />
         )}
