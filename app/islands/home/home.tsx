@@ -5,12 +5,14 @@ import {
   locals,
   prefectures,
   prefecturesInLocal,
+  Prefectures,
 } from "../../const/prefectures";
 import Japan from "../Japan/Japan";
 import { Header } from "../../components/Header";
 
 const Home = () => {
   useEffect(() => {
+    const colors: Prefectures[] = ["kanagawa", "tokyo", "hokkaido", "tochigi"];
     prefectures.map((prefecture) => {
       const ele = document.getElementsByClassName(prefecture)[0];
       ele.addEventListener("click", (e) => {
@@ -18,6 +20,9 @@ const Home = () => {
         location.href = `/prefecture/${prefecture}`;
       });
       ele.setAttribute("tabindex", "1");
+      if (colors.includes(prefecture)) {
+        ele.classList.add("fill-sky-400");
+      }
     });
   }, []);
 
