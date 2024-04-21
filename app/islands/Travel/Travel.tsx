@@ -6,15 +6,15 @@ const Travel = () => {
     <>
       {stub_travel.map((data) => {
         return (
-          <div>
+          <div class="flex flex-col gap-2 shadow-lg border border-black p-2 rounded-lg">
             <img src={data.images[0]} alt={`${data.title}のベストショット`} />
-            <p>{data.title}</p>
-            <p>
+            <h2 class="text-xl">{data.title}</h2>
+            <p class="m-0">
               {dayjs(data.begin).format("YYYY/MM/DD")} ~{" "}
               {dayjs(data.end).format("YYYY/MM/DD")}
             </p>
             <div class="flex flex-row gap-2 items-center">
-              <p class="w-fit">参加メンバー：</p>
+              <p class="w-fit m-0">参加メンバー：</p>
               {data.members.map((memberId) => {
                 const member = stub_member.find(
                   (member) => member.id === memberId

@@ -11,7 +11,11 @@ export default jsxRenderer(({ children, title }) => {
         <title>{title}</title>
         <Script src="/app/client.ts" async />
         <Style />
-        <link href="/app/index.css" rel="stylesheet" />
+        {import.meta.env.PROD ? (
+          <link rel="stylesheet" href="/static/assets/index.css" />
+        ) : (
+          <link href="/app/index.css" rel="stylesheet" />
+        )}
         <link href="https://unpkg.com/mvp.css" rel="stylesheet" />
       </head>
       <body class="max-w-md mx-auto mt-8">{children}</body>

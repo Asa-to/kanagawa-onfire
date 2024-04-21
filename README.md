@@ -71,15 +71,16 @@
     - 常に 1 つの ec2 スポットインスタンスを維持する
   - alb
   - acm
-  - lambda
-    - honox を SSR
-      - public subnet
-    - honox のサーバー部分
-      - private subnet
   - cloud front
     - Google Domains の独自ドメインを繋げる
 - Google Domains
   - 神奈川オンファイア.page の管理
+- cloudflare pages
+  - lambda(将来的にはこっちにしたい)
+    - honox を SSR
+      - public subnet
+    - honox のサーバー部分
+      - private subnet
 
 ## 開発手順
 
