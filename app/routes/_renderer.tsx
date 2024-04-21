@@ -14,7 +14,7 @@ export default jsxRenderer(({ children, title }) => {
         <link href="/app/index.css" rel="stylesheet" />
         <link href="https://unpkg.com/mvp.css" rel="stylesheet" />
       </head>
-      <body>{children}</body>
+      <body class="max-w-md mx-auto mt-8">{children}</body>
     </html>
   );
 });

@@ -1,28 +1,30 @@
-import Japan from "../japan/Japan";
 import { useEffect } from "hono/jsx";
 import {
-  PrefectureKanjiMap,
+  prefectureKanjiMap,
   localKanjiMap,
   locals,
   prefectures,
   prefecturesInLocal,
-} from "../../types/prefectures";
+} from "../../const/prefectures";
+import Japan from "../Japan/Japan";
+import { Header } from "../../components/Header";
 
 const Home = () => {
   useEffect(() => {
     prefectures.map((prefecture) => {
-      document
-        .getElementsByClassName(prefecture)[0]
-        .addEventListener("click", (e) => {
-          e.preventDefault();
-          location.href = `/prefecture/${prefecture}`;
-        });
+      const ele = document.getElementsByClassName(prefecture)[0];
+      ele.addEventListener("click", (e) => {
+        e.preventDefault();
+        location.href = `/prefecture/${prefecture}`;
+      });
+      ele.setAttribute("tabindex", "1");
     });
   }, []);
 
   return (
-    <div class="flex flex-col gap-8 mt-8 max-w-screen-sm mx-auto">
-      <div class="mx-4">
+    <div class="flex flex-col gap-12">
+      <Header>神奈川オンファイア</Header>
+      <div class="mx-4 shadow-lg border p-4 rounded-3xl border-black">
         <Japan />
       </div>
       <div class="flex flex-row gap-2 flex-wrap justify-center">
@@ -33,7 +35,7 @@ const Home = () => {
               {prefecturesInLocal[local].map((prefecture) => {
                 return (
                   <a href={`prefecture/${prefecture}`}>
-                    {PrefectureKanjiMap[prefecture]}
+                    {prefectureKanjiMap[prefecture]}
                   </a>
                 );
               })}

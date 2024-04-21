@@ -10,6 +10,7 @@
   "private": true,
   "dependencies": {
     "@hono/zod-validator": "^0.2.1",
+    "dayjs": "^1.11.10",
     "hono": "^4.1.4",
     "honox": "^0.1.9",
     "zod": "^3.22.4"

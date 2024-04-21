@@ -1,11 +1,10 @@
 import { createRoute } from "honox/factory";
+import { Header } from "../components/Header";
 
 export default createRoute((c) => {
   return c.render(
     <div>
-      <header>
-        <h1>神奈川オンファイア</h1>
-      </header>
+      <Header>神奈川オンファイア</Header>
       <main>
         <p>サービスを利用するためにはログインしてください</p>
         <form method="post" action="api/signin">

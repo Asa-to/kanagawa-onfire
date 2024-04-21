@@ -31,12 +31,12 @@ type LocalPrefectures = {
 };
 
 // prettier-ignore
-export type Prefectures = | "okinawa" | "kagoshima" | "miyazaki" | "oita" | "kumamoto" | "nagasaki" | "saga" | "fukuoka" | "kochi" | "kagawa" | "tokushima" | "yamaguchi" | "hiroshima" | "okayama" | "shimane" | "tottori" | "wakayama" | "nara" | "hyogo" | "osaka" | "kyoto" | "shiga" | "mie" | "aichi" | "shizuoka" | "gifu" | "nagano" | "yamanashi" | "fukui" | "ishikawa" | "toyama" | "niigata" | "kanagawa" | "tokyo" | "chiba" | "saitama" | "gunma" | "tochigi" | "ibaraki" | "fukushima" | "yamagata" | "akita" | "miyagi" | "iwate" | "aomori" | "hokkaido";
+export type Prefectures = | "okinawa" | "kagoshima" | "miyazaki" | "oita" | "kumamoto" | "nagasaki" | "saga" | "fukuoka" | "kochi" | "kagawa" | "tokushima" | "yamaguchi" | "hiroshima" | "okayama" | "shimane" | "tottori" | "wakayama" | "nara" | "hyogo" | "osaka" | "kyoto" | "shiga" | "mie" | "aichi" | "shizuoka" | "gifu" | "nagano" | "yamanashi" | "fukui" | "ishikawa" | "toyama" | "niigata" | "kanagawa" | "tokyo" | "chiba" | "saitama" | "gunma" | "tochigi" | "ibaraki" | "fukushima" | "yamagata" | "akita" | "miyagi" | "iwate" | "aomori" | "hokkaido" | "ehime";
 
 type Local = keyof LocalPrefectures;
 
 // prettier-ignore
-export const prefectures = [ "okinawa", "kagoshima", "miyazaki", "oita", "kumamoto", "nagasaki", "saga", "fukuoka", "kochi", "kagawa", "tokushima", "yamaguchi", "hiroshima", "okayama", "shimane", "tottori", "wakayama", "nara", "hyogo", "osaka", "kyoto", "shiga", "mie", "aichi", "shizuoka", "gifu", "nagano", "yamanashi", "fukui", "ishikawa", "toyama", "niigata", "kanagawa", "tokyo", "chiba", "saitama", "gunma", "tochigi", "ibaraki", "fukushima", "yamagata", "akita", "miyagi", "iwate", "aomori","hokkaido" ];
+export const prefectures: Prefectures[] = [ "okinawa", "kagoshima", "miyazaki", "oita", "kumamoto", "nagasaki", "saga", "fukuoka", "kochi", "kagawa", "tokushima", "yamaguchi", "hiroshima", "okayama", "shimane", "tottori", "wakayama", "nara", "hyogo", "osaka", "kyoto", "shiga", "mie", "aichi", "shizuoka", "gifu", "nagano", "yamanashi", "fukui", "ishikawa", "toyama", "niigata", "kanagawa", "tokyo", "chiba", "saitama", "gunma", "tochigi", "ibaraki", "fukushima", "yamagata", "akita", "miyagi", "iwate", "aomori","hokkaido", "ehime" ];
 
 export const prefecturesInLocal: { [key in string]: Prefectures[] } = {
   kyusyu: [
@@ -49,7 +49,7 @@ export const prefecturesInLocal: { [key in string]: Prefectures[] } = {
     "saga",
     "fukuoka",
   ],
-  shikoku: ["kochi", "kagawa", "tokushima"],
+  shikoku: ["kochi", "kagawa", "tokushima", "ehime"],
   chugoku: ["yamaguchi", "hiroshima", "okayama", "shimane", "tottori"],
   kinki: ["wakayama", "nara", "hyogo", "osaka", "kyoto", "shiga", "mie"],
   chubu: [
@@ -76,7 +76,7 @@ export const prefecturesInLocal: { [key in string]: Prefectures[] } = {
   hokkaido: ["hokkaido"],
 };
 
-export const PrefectureKanjiMap: { [key in Prefectures]: string } = {
+export const prefectureKanjiMap: { [key in Prefectures]: string } = {
   okinawa: "沖縄",
   kagoshima: "鹿児島",
   miyazaki: "宮崎",
@@ -87,6 +87,7 @@ export const PrefectureKanjiMap: { [key in Prefectures]: string } = {
   fukuoka: "福岡",
   kochi: "高知",
   kagawa: "香川",
+  ehime: "愛媛",
   tokushima: "徳島",
   yamaguchi: "山口",
   hiroshima: "広島",
