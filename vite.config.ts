@@ -2,6 +2,7 @@ import pages from "@hono/vite-cloudflare-pages";
 import honox from "honox/vite";
 import client from "honox/vite/client";
 import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig(({ mode }) => {
   if (mode === "client") {
@@ -14,11 +15,11 @@ export default defineConfig(({ mode }) => {
           },
         },
       },
-      plugins: [client()],
+      plugins: [client(), tsconfigPaths()],
     };
   } else {
     return {
-      plugins: [honox(), pages()],
+      plugins: [honox(), pages(), tsconfigPaths()],
     };
   }
 });

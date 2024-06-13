@@ -7,7 +7,6 @@ import {
   prefecturesInLocal,
   prefectureKanjiMap,
 } from "@/const/prefectures";
-import Japan from "@/islands/Japan/Japan";
 import { useEffect } from "hono/jsx";
 
 const Home = () => {
@@ -30,7 +29,7 @@ const Home = () => {
     <div class="flex flex-col gap-12">
       <Header>神奈川オンファイア</Header>
       <div class="mx-4 shadow-lg border p-4 rounded-3xl border-black">
-        <Japan />
+        <Map />
       </div>
       <div class="flex flex-row gap-2 flex-wrap justify-center">
         {locals.map((local) => {
