@@ -1,5 +1,5 @@
+import { stub_travel, stub_member } from "@/islands/Travel/stub";
 import dayjs from "dayjs/esm";
-import { stub_member, stub_travel } from "../Travel/stub";
 import { useState } from "hono/jsx";
 
 const TravelDetail = () => {

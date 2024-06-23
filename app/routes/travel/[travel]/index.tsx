@@ -1,8 +1,8 @@
 import { createRoute } from "honox/factory";
-import BackButton from "../../../islands/BackButton/BackButton";
-import { Header } from "../../../components/Header";
-import { stub_travel } from "../../../islands/Travel/stub";
-import TravelDetail from "../../../islands/TravelDetail/TravelDetail";
+import BackButton from "@/components/BackButton.tsx/$backButton";
+import { Header } from "@/components/Header";
+import { stub_travel } from "@/islands/Travel/stub";
+import TravelDetail from "@/islands/TravelDetail/TravelDetail";
 
 export default createRoute((c) =>
   c.render(

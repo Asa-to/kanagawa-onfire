@@ -1,5 +1,5 @@
+import { stub_travel, stub_member } from "@/islands/Travel/stub";
 import dayjs from "dayjs/esm/index";
-import { stub_member, stub_travel } from "./stub";
 
 const Travel = () => {
   return (

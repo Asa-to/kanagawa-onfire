@@ -1,6 +1,6 @@
+import { prefectureKanjiMap, Prefectures } from "@/const/prefectures";
+import Travel from "@/islands/Travel/Travel";
 import { createRoute } from "honox/factory";
-import { Prefectures, prefectureKanjiMap } from "../../../const/prefectures";
-import Travel from "../../../islands/Travel/Travel";
 
 export default createRoute((c) =>
   c.render(
@@ -10,7 +10,7 @@ export default createRoute((c) =>
       </h1>
       <a href="/home">日本地図に戻る</a>
       <Travel />
-      <button>旅行登録</button>
+      <a>旅行登録</a>
     </div>
   )
 );
