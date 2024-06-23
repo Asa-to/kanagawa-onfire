@@ -2,7 +2,7 @@ import { Prefectures, prefectures } from "@/const/prefectures";
 import Japan from "@/islands/Japan/Japan";
 import { useEffect } from "hono/jsx";
 
-const Map = () => {
+const JapanMap = () => {
   useEffect(() => {
     const colors: Prefectures[] = ["kanagawa", "tokyo", "hokkaido", "tochigi"];
     prefectures.map((prefecture) => {
@@ -21,4 +21,4 @@ const Map = () => {
   return <Japan />;
 };
 
-export default Map;
+export default JapanMap;
